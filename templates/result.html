@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Resultado</h2>
+{% if public_key and private_key %}
+  <h4>Chave Pública:</h4>
+  <pre>{{ public_key }}</pre>
+  <h4>Chave Privada:</h4>
+  <pre>{{ private_key }}</pre>
+{% endif %}
+{% if ciphertext %}
+  <h4>Cipher (base64):</h4>
+  <pre>{{ ciphertext }}</pre>
+{% endif %}
+{% if message %}
+  <h4>Mensagem Decifrada:</h4>
+  <pre>{{ message }}</pre>
+{% endif %}
+<a href="{{ url_for('index') }}" class="btn btn-link">Voltar</a>
+{% endblock %}
