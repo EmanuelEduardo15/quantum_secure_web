@@ -1,0 +1,10 @@
+quantum_secure_web/
+├── app.py
+├── templates/
+│   ├── layout.html
+│   ├── index.html
+│   └── result.html
+├── static/
+│   └── style.css
+├── requirements.txt
+└── README.md
