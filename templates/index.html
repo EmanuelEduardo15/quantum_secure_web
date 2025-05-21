@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>Iniciar Geração de Chave RSA-2048</h1>
+<form method="post">
+  <button type="submit" class="btn btn-primary">Gerar Par de Chaves</button>
+</form>
+<hr>
+<h2>Encriptar Mensagem</h2>
+<form action="{{ url_for('encrypt') }}" method="post">
+  <textarea name="public_key" class="form-control" placeholder="Cole aqui sua chave pública" rows="5"></textarea><br>
+  <input name="message" class="form-control" placeholder="Mensagem..." /><br>
+  <button class="btn btn-success">Cifrar</button>
+</form>
+<hr>
+<h2>Desencriptar Mensagem</h2>
+<form action="{{ url_for('decrypt') }}" method="post">
+  <textarea name="private_key" class="form-control" placeholder="Cole aqui sua chave privada" rows="5"></textarea><br>
+  <textarea name="ciphertext" class="form-control" placeholder="Cipher (base64)" rows="3"></textarea><br>
+  <button class="btn btn-warning">Decifrar</button>
+</form>
+{% endblock %}
