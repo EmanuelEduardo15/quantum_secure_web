@@ -1,0 +1,5 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Status da chave {{ task_id }}</h2>
+<p>Ainda em geração… atualize esta página em alguns segundos ou <a href="{{ url_for('status', task_id=task_id) }}">recarregue</a>.</p>
+{% endblock %}
